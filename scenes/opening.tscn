@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://fiykq0u1rshk"]
+
+[ext_resource type="Texture2D" uid="uid://cqobfcxlsao4" path="res://assets/backgrounds/Scene 1(blurry).png" id="1_gafq3"]
+[ext_resource type="FontFile" uid="uid://bbchvx2mh7yc" path="res://assets/fonts/Silkscreen/Silkscreen-Regular.ttf" id="2_y6ged"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uj04i"]
+bg_color = Color(0.94509804, 0.92156863, 0.91764706, 0.9372549)
+
+[node name="opening" type="Control" unique_id=739953680]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="background" type="TextureRect" parent="." unique_id=92878317]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_gafq3")
+
+[node name="title" type="Label" parent="." unique_id=1922196091]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -179.0
+offset_top = -49.5
+offset_right = 179.0
+offset_bottom = 49.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_y6ged")
+theme_override_font_sizes/font_size = 78
+text = "SCAMLESS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="tagline" type="Label" parent="." unique_id=455754195]
+self_modulate = Color(1, 1, 1, 0.39215687)
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.586
+anchor_right = 0.5
+anchor_bottom = 0.586
+offset_left = -122.0
+offset_top = -11.728027
+offset_right = 116.0
+offset_bottom = 11.271973
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_y6ged")
+text = "Think Before You Trust"
+horizontal_alignment = 1
+
+[node name="aboutbutton" type="Button" parent="." unique_id=1412763982]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.89800006
+anchor_right = 1.0
+anchor_bottom = 0.080000006
+offset_left = 0.50390625
+offset_bottom = 0.15999603
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("2_y6ged")
+text = "ⓘ ABOUT"
+icon_alignment = 1
+vertical_icon_alignment = 2
+
+[node name="startbutton" type="Button" parent="." unique_id=236777756]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.45600003
+anchor_top = 0.625
+anchor_right = 0.54
+anchor_bottom = 0.693
+offset_left = -0.31201172
+offset_right = -0.08001709
+offset_bottom = -0.06402588
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.10617893, 0.22964081, 0.321411, 1)
+theme_override_colors/font_disabled_color = Color(0.8745098, 0.8745098, 0.8745098, 0.3137255)
+theme_override_colors/font_outline_color = Color(0.542318, 0.542318, 0.542318, 1)
+theme_override_fonts/font = ExtResource("2_y6ged")
+theme_override_styles/normal = SubResource("StyleBoxFlat_uj04i")
+text = "START"
