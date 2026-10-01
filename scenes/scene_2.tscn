@@ -1,11 +1,21 @@
 [gd_scene format=3 uid="uid://dsr4qhk0gsiew"]
 
 [ext_resource type="Texture2D" uid="uid://dmn1h67ycchf0" path="res://assets/backgrounds/Scene2(2).png" id="1_xe0r6"]
+[ext_resource type="Script" uid="uid://bmhvjx3fmqtk8" path="res://scenes/scene_2.gd" id="1_yun4j"]
 [ext_resource type="PackedScene" uid="uid://b1yt0prwlu3wm" path="res://player/samuel.tscn" id="2_vsrvg"]
 [ext_resource type="Texture2D" uid="uid://d3dt2nev3lqsx" path="res://icon.svg" id="3_02v7m"]
+[ext_resource type="FontFile" uid="uid://bbchvx2mh7yc" path="res://assets/fonts/Silkscreen/Silkscreen-Regular.ttf" id="4_ccscm"]
+[ext_resource type="FontFile" uid="uid://cqptm7jmtnhk5" path="res://assets/fonts/Silkscreen/Silkscreen-Bold.ttf" id="5_yun4j"]
+[ext_resource type="Texture2D" uid="uid://dpxfqw6jdfabc" path="res://assets/popups/popup.png" id="7_qo03w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uj04i"]
 size = Vector2(1150, 98)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uj04i"]
+bg_color = Color(0.6, 0.6, 0.6, 0.007843138)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p5viw"]
+size = Vector2(131, 93)
 
 [node name="scene2" type="Control" unique_id=1204856967]
 layout_mode = 3
@@ -14,6 +24,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_yun4j")
 
 [node name="background2" type="TextureRect" parent="." unique_id=1902666492]
 layout_mode = 1
@@ -36,3 +47,85 @@ texture = ExtResource("3_02v7m")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1832915068]
 position = Vector2(188, -14)
 shape = SubResource("RectangleShape2D_uj04i")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=998101983]
+
+[node name="ui" type="Control" parent="CanvasLayer" unique_id=1085841414]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="paynow" type="Button" parent="CanvasLayer/ui" unique_id=1088060205]
+visible = false
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 22.6
+anchor_top = 12.525001
+anchor_right = 22.6
+anchor_bottom = 12.525001
+offset_left = -42.0
+offset_top = -11.0000305
+offset_right = 42.0
+offset_bottom = 10.9999695
+theme_override_fonts/font = ExtResource("4_ccscm")
+theme_override_font_sizes/font_size = 10
+text = "pay now"
+
+[node name="buy1ketoprak" type="Button" parent="CanvasLayer/ui" unique_id=486351298]
+visible = false
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 17.650002
+anchor_top = 10.837001
+anchor_right = 17.650002
+anchor_bottom = 10.837001
+offset_left = -99.00006
+offset_top = -5.4800415
+offset_right = 56.99994
+offset_bottom = 15.5199585
+theme_override_fonts/font = ExtResource("4_ccscm")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxFlat_uj04i")
+text = "buy 1 ketoprak"
+
+[node name="+ketoprak" type="Label" parent="CanvasLayer/ui" unique_id=1156243985]
+visible = false
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 17.7
+anchor_top = 11.537001
+anchor_right = 17.7
+anchor_bottom = 11.537001
+offset_left = -66.0
+offset_top = -11.4800415
+offset_right = 66.0
+offset_bottom = 11.5199585
+theme_override_fonts/font = ExtResource("5_yun4j")
+text = "+ ketoprak"
+
+[node name="interactionarea" type="Area2D" parent="." unique_id=526651215]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactionarea" unique_id=644301189]
+position = Vector2(671, 525)
+shape = SubResource("RectangleShape2D_p5viw")
+
+[node name="qrpopup" type="Control" parent="." unique_id=804283808]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="qrpopup" unique_id=1820382081]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("7_qo03w")
+
+[connection signal="pressed" from="CanvasLayer/ui/paynow" to="." method="_on_paynow_pressed"]
+[connection signal="pressed" from="CanvasLayer/ui/buy1ketoprak" to="." method="_on_buy_1_ketoprak_pressed"]
+[connection signal="toggled" from="CanvasLayer/ui/buy1ketoprak" to="." method="_on_buy_1_ketoprak_toggled"]
+[connection signal="body_entered" from="interactionarea" to="." method="_on_interactionarea_body_entered"]
+[connection signal="body_exited" from="interactionarea" to="." method="_on_interactionarea_body_exited"]

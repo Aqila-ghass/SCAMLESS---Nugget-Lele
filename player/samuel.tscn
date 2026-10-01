@@ -100,7 +100,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"idle",
-"speed": 7.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -123,7 +123,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"left",
-"speed": 9.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -146,7 +146,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"right",
-"speed": 9.0
+"speed": 10.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uj04i"]
@@ -163,7 +163,6 @@ scale = Vector2(3.5, 3.5)
 sprite_frames = SubResource("SpriteFrames_p5viw")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.9320852
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=527192496]
 position = Vector2(285, 573)
