@@ -1,0 +1,420 @@
+[gd_scene format=3 uid="uid://bpe2tmn6o7gy3"]
+
+[ext_resource type="Script" uid="uid://dhu8engjblwbn" path="res://scenes/scene_1.gd" id="1_ka884"]
+[ext_resource type="Texture2D" uid="uid://beqjgkpim3xbd" path="res://assets/backgrounds/Scene 1.png" id="2_ka884"]
+[ext_resource type="FontFile" uid="uid://bbchvx2mh7yc" path="res://assets/fonts/Silkscreen/Silkscreen-Regular.ttf" id="3_cn2eb"]
+[ext_resource type="Texture2D" uid="uid://dpxfqw6jdfabc" path="res://assets/popups/popup.png" id="4_sj5te"]
+[ext_resource type="Texture2D" uid="uid://cdfjubt87eviu" path="res://assets/logo/scamlesslogo.png" id="4_t6bmd"]
+[ext_resource type="FontFile" uid="uid://cqptm7jmtnhk5" path="res://assets/fonts/Silkscreen/Silkscreen-Bold.ttf" id="5_lki8s"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yjll7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cn2eb"]
+bg_color = Color(0.9691939, 0.9673709, 0.96561366, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sj5te"]
+bg_color = Color(0.918091, 0.91809106, 0.91809094, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t6bmd"]
+bg_color = Color(0.9691939, 0.9673709, 0.96561366, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lki8s"]
+bg_color = Color(0.9691939, 0.9673709, 0.96561366, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uj04i"]
+bg_color = Color(0.55946547, 0.7011784, 0.8771713, 0.4745098)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7h7mn"]
+bg_color = Color(0.14956117, 0.22648516, 0.37171987, 1)
+shadow_color = Color(0.28627452, 0.28627452, 0.28627452, 0.6784314)
+shadow_size = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vpupq"]
+bg_color = Color(0.6, 0.6, 0.6, 0.003921569)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0udnx"]
+bg_color = Color(0.24705882, 0.32941177, 0.4862745, 0.35686275)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2uf65"]
+bg_color = Color(0.6, 0.6, 0.6, 0.011764706)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jc63w"]
+bg_color = Color(0.2056463, 0.30141497, 0.48196858, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 3
+
+[node name="scene1" type="Control" unique_id=318029577]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ka884")
+
+[node name="background" type="TextureRect" parent="." unique_id=820064189]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ka884")
+
+[node name="transition" type="ColorRect" parent="." unique_id=1622878699]
+self_modulate = Color(1, 1, 1, 0.003921569)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0415072, 0.041507192, 0.041507192, 1)
+
+[node name="popup1" type="Panel" parent="." unique_id=1296035312]
+modulate = Color(0.97742194, 0.9686535, 0.96550626, 1)
+self_modulate = Color(18.075602, 17.943865, 17.93374, 1)
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.37
+anchor_right = 0.63000005
+anchor_bottom = 0.15400001
+offset_left = -0.23999023
+offset_right = 0.2399292
+offset_bottom = 0.20799255
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yjll7")
+
+[node name="Button" type="Button" parent="popup1" unique_id=1432795381]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.02745098)
+theme_override_colors/icon_normal_color = Color(18.892157, 18.892157, 18.892157, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_cn2eb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_sj5te")
+theme_override_styles/hover = SubResource("StyleBoxFlat_t6bmd")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_lki8s")
+
+[node name="scamlesspopup1" type="Label" parent="popup1" unique_id=974615012]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.13700001
+anchor_top = 0.116000004
+anchor_right = 0.30600002
+anchor_bottom = 0.33800003
+offset_left = 8.899998
+offset_top = -3.6000004
+offset_right = 17.19999
+offset_bottom = -3.6169624
+theme_override_colors/font_color = Color(0.16470589, 0.16078432, 0.2, 0.7921569)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.15686275)
+theme_override_fonts/font = ExtResource("3_cn2eb")
+theme_override_font_sizes/font_size = 10
+text = "SCAMLESS"
+
+[node name="heypeerspopup1" type="Label" parent="popup1" unique_id=530603684]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.063
+anchor_top = 0.367
+anchor_right = 0.38900003
+anchor_bottom = 0.569
+offset_left = -0.050001144
+offset_top = -9.05056
+offset_right = 29.84999
+offset_bottom = -8.993919
+theme_override_colors/font_color = Color(0.19818118, 0.24262223, 0.3562813, 1)
+theme_override_colors/font_shadow_color = Color(0.20272335, 0.20272335, 0.20272332, 0.15294118)
+theme_override_fonts/font = ExtResource("3_cn2eb")
+text = "Hey, Peers! 👋🏻"
+
+[node name="textpopup1" type="Label" parent="popup1" unique_id=678597728]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.063
+anchor_top = 0.588
+anchor_right = 0.83400005
+anchor_bottom = 0.81000006
+offset_left = -0.050001144
+offset_top = -5.9638405
+offset_right = 0.099975586
+offset_bottom = -5.9808044
+theme_override_colors/font_color = Color(0.24705882, 0.28627452, 0.35686275, 0.80784315)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.14509805)
+theme_override_fonts/font = ExtResource("3_cn2eb")
+theme_override_font_sizes/font_size = 10
+text = "You've got a new journey waiting."
+
+[node name="textpopup2" type="Label" parent="popup1" unique_id=1112520364]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 52.625004
+anchor_top = 10.812
+anchor_right = 59.875004
+anchor_bottom = 10.812
+offset_left = -15767.501
+offset_top = -1006.2001
+offset_right = -15767.501
+offset_bottom = -995.2001
+theme_override_colors/font_color = Color(0.24705882, 0.28627452, 0.35686275, 0.32941177)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.14509805)
+theme_override_fonts/font = ExtResource("3_cn2eb")
+theme_override_font_sizes/font_size = 8
+text = "Tap to view"
+
+[node name="logo" type="TextureRect" parent="popup1" unique_id=48001165]
+layout_mode = 1
+offset_left = 21.0
+offset_top = 3.0
+offset_right = 43.0
+offset_bottom = 25.0
+texture = ExtResource("4_t6bmd")
+expand_mode = 1
+
+[node name="panelpopup2" type="Control" parent="." unique_id=1125961558]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="panelpopup2" unique_id=554947055]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -175.0
+offset_right = 250.0
+offset_bottom = 175.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_sj5te")
+
+[node name="logo" type="TextureRect" parent="panelpopup2/TextureRect" unique_id=2047120946]
+light_mask = 2
+visibility_layer = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.066
+anchor_top = 0.081
+anchor_right = 0.066
+anchor_bottom = 0.081
+offset_left = -18.0
+offset_top = -17.35
+offset_right = 18.0
+offset_bottom = 17.65
+texture = ExtResource("4_t6bmd")
+expand_mode = 1
+
+[node name="scamlesspopup2" type="Label" parent="panelpopup2" unique_id=1934334668]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -3.1750002
+anchor_top = -3.3120003
+anchor_right = -3.1750002
+anchor_bottom = -3.3120003
+offset_left = -40.999992
+offset_top = -11.519989
+offset_right = 53.000008
+offset_bottom = 11.480011
+theme_override_colors/font_shadow_color = Color(0.09803922, 0.09803922, 0.09803922, 0.1764706)
+theme_override_fonts/font = ExtResource("3_cn2eb")
+text = "scamless"
+
+[node name="justnow" type="Label" parent="panelpopup2" unique_id=1961623650]
+self_modulate = Color(1, 1, 1, 0.76862746)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -3.5620003
+anchor_top = -2.7370002
+anchor_right = -3.5620003
+anchor_bottom = -2.7370002
+offset_left = -26.519989
+offset_top = -11.519989
+offset_right = 26.480011
+offset_bottom = 11.480011
+theme_override_fonts/font = ExtResource("3_cn2eb")
+theme_override_font_sizes/font_size = 9
+text = "Just now"
+
+[node name="heypeers" type="Label" parent="panelpopup2" unique_id=2025010699]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -3.4620001
+anchor_top = -1.2620001
+anchor_right = -3.4620001
+anchor_bottom = -1.2620001
+offset_left = -59.51999
+offset_top = -27.519997
+offset_right = 51.48001
+offset_bottom = 5.4800034
+theme_override_colors/font_color = Color(0.19215687, 0.3372549, 0.58431375, 0.7254902)
+theme_override_fonts/font = ExtResource("3_cn2eb")
+theme_override_font_sizes/font_size = 11
+text = "Hey, peers! 👋🏻  
+"
+
+[node name="welcome" type="Label" parent="panelpopup2" unique_id=1840922272]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -2.15
+anchor_top = -0.66200006
+anchor_right = -2.15
+anchor_bottom = -0.66200006
+offset_left = -115.0
+offset_top = -29.519997
+offset_right = 133.0
+offset_bottom = -5.5199966
+theme_override_colors/font_color = Color(0.09372338, 0.18695173, 0.34358886, 1)
+theme_override_fonts/font = ExtResource("3_cn2eb")
+theme_override_font_sizes/font_size = 18
+text = "welcome to scamless."
+
+[node name="Label" type="Label" parent="panelpopup2" unique_id=1892791024]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -220.0
+offset_top = -43.0
+offset_right = 230.0
+offset_bottom = 74.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.25882354, 0.25882354, 0.25882354, 0.64705884)
+theme_override_fonts/font = ExtResource("3_cn2eb")
+theme_override_font_sizes/font_size = 11
+text = "everyday, we receive messages, notification, links, and payment requests that look completely normal.
+
+some are safe. some aren't."
+autowrap_mode = 2
+
+[node name="yourjob" type="Panel" parent="panelpopup2" unique_id=1101381237]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.8000001
+anchor_right = 0.5
+anchor_bottom = 1.8000001
+offset_left = -223.0
+offset_top = -20.0
+offset_right = 223.0
+offset_bottom = 20.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_uj04i")
+
+[node name="yourjobtext" type="Label" parent="panelpopup2/yourjob" unique_id=1000511209]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.22000001
+anchor_top = 0.48700002
+anchor_right = 0.22000001
+anchor_bottom = 0.48700002
+offset_left = -78.12
+offset_top = -7.4800014
+offset_right = 77.88
+offset_bottom = 7.5199986
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.25882354, 0.25882354, 0.25882354, 0.64705884)
+theme_override_fonts/font = ExtResource("3_cn2eb")
+theme_override_font_sizes/font_size = 10
+text = "your job is simple:"
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="yourjobtext2" type="Label" parent="panelpopup2/yourjob" unique_id=244853536]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.56200004
+anchor_top = 0.48700002
+anchor_right = 0.56200004
+anchor_bottom = 0.48700002
+offset_left = -99.65202
+offset_top = -7.4800014
+offset_right = 99.34798
+offset_bottom = 7.5199986
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.21593618, 0.25747722, 0.39915016, 0.64705884)
+theme_override_fonts/font = ExtResource("5_lki8s")
+theme_override_font_sizes/font_size = 10
+text = "Think before you trust."
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="startjourneypanel" type="Panel" parent="panelpopup2" unique_id=308431644]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.8000001
+anchor_right = 0.5
+anchor_bottom = 1.8000001
+offset_left = -223.0
+offset_top = 53.0
+offset_right = 223.0
+offset_bottom = 93.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_7h7mn")
+
+[node name="yourjobtext" type="Label" parent="panelpopup2/startjourneypanel" unique_id=614000882]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.874992
+offset_top = -7.5
+offset_right = 56.874992
+offset_bottom = 7.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.9411765, 0.93333334, 0.9254902, 0.9882353)
+theme_override_fonts/font = ExtResource("5_lki8s")
+theme_override_font_sizes/font_size = 10
+text = "Start journey"
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Button2" type="Button" parent="panelpopup2/startjourneypanel" unique_id=1001568173]
+layout_mode = 0
+offset_right = 446.0
+offset_bottom = 40.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.07058824)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vpupq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0udnx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2uf65")
+
+[node name="yourjob2" type="Panel" parent="panelpopup2" unique_id=1684380835]
+layout_mode = 0
+offset_left = -203.0
+offset_top = 52.0
+offset_right = -199.0
+offset_bottom = 92.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jc63w")
+
+[connection signal="pressed" from="popup1/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="panelpopup2/startjourneypanel/Button2" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="panelpopup2/startjourneypanel/Button2" to="." method="_on_button_2_pressed"]

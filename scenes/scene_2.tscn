@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://dsr4qhk0gsiew"]
+
+[ext_resource type="Texture2D" uid="uid://dmn1h67ycchf0" path="res://assets/backgrounds/Scene2(2).png" id="1_xe0r6"]
+[ext_resource type="PackedScene" uid="uid://b1yt0prwlu3wm" path="res://player/samuel.tscn" id="2_vsrvg"]
+[ext_resource type="Texture2D" uid="uid://d3dt2nev3lqsx" path="res://icon.svg" id="3_02v7m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uj04i"]
+size = Vector2(1150, 98)
+
+[node name="scene2" type="Control" unique_id=1204856967]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="background2" type="TextureRect" parent="." unique_id=1902666492]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_xe0r6")
+
+[node name="samuel" parent="." unique_id=2075155012 instance=ExtResource("2_vsrvg")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1144754780]
+position = Vector2(387, 712)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=2030649301]
+texture = ExtResource("3_02v7m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1832915068]
+position = Vector2(188, -14)
+shape = SubResource("RectangleShape2D_uj04i")
